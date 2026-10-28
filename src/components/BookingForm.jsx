@@ -139,15 +139,28 @@ export default function BookingForm({
         if (!value || !JOURNEY_TYPES.includes(value)) return 'Please select a valid journey type.';
         return null;
 
-      case 'travelDate':
-        if (!value) return 'Travel date is required.';
-        if (value < todayStr) return 'Travel date cannot be in the past.';
+      case 'travelDate': {
+        if (!value || !value.trim()) return 'Travel date is required.';
+        const today = getTodayDateString();
+        if (value < today) return 'Travel date cannot be in the past.';
         return null;
+      }
 
       case 'passengerCount': {
-        const num = parseInt(value, 10);
-        if (!value || isNaN(num) || num < 1) return 'Please specify at least 1 passenger.';
-        if (num > 50) return 'For groups above 50, please contact our desk directly.';
+        if (value === '' || value === null || value === undefined) {
+          return 'Please specify the number of passengers (minimum 1).';
+        }
+        const strVal = String(value).trim();
+        if (!/^\d+$/.test(strVal)) {
+          return 'Please enter a valid whole number of passengers.';
+        }
+        const num = Number(strVal);
+        if (!Number.isInteger(num) || num < 1) {
+          return 'Number of passengers must be at least 1.';
+        }
+        if (num > 50) {
+          return 'For groups above 50 passengers, please contact our desk directly.';
+        }
         return null;
       }
 
@@ -184,10 +197,22 @@ export default function BookingForm({
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    // Special handling for passengerCount: accept only positive digits
+    if (name === 'passengerCount') {
+      const sanitizedDigits = value.replace(/\D/g, '');
+      setFormData((prev) => ({ ...prev, passengerCount: sanitizedDigits }));
+      if (touched.passengerCount) {
+        const fieldError = validateField('passengerCount', sanitizedDigits);
+        setErrors((prev) => ({ ...prev, passengerCount: fieldError }));
+      }
+      return;
+    }
+
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    // Re-validate field on the fly if it has already been touched
-    if (touched[name]) {
+    // Re-validate field on the fly if it has already been touched, or if travelDate was selected
+    if (touched[name] || (name === 'travelDate' && value)) {
       const fieldError = validateField(name, value);
       setErrors((prev) => ({ ...prev, [name]: fieldError }));
     }
@@ -491,20 +516,35 @@ Kindly share fare quotation, availability, and vehicle details.`;
               Travel Date <span className="text-red-600">*</span>
             </label>
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              <div 
+                onClick={() => {
+                  const input = document.getElementById('travelDate');
+                  if (input) {
+                    input.focus();
+                    try { if (input.showPicker) input.showPicker(); } catch (_) {}
+                  }
+                }}
+                className="absolute inset-y-0 left-0 pl-3.5 flex items-center cursor-pointer text-slate-400 hover:text-amber-600 transition-colors"
+                title="Select travel date"
+              >
                 <Calendar className="w-4 h-4" />
               </div>
               <input
                 id="travelDate"
                 type="date"
                 name="travelDate"
-                min={todayStr}
+                min={getTodayDateString()}
                 value={formData.travelDate}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                aria-invalid={errors.travelDate ? 'true' : 'false'}
-                aria-describedby={errors.travelDate ? 'travelDate-error' : undefined}
-                className={`w-full pl-10 pr-3 py-2.5 text-sm bg-white border rounded-xl focus:outline-none focus:ring-2 transition-all ${
+                onClick={(e) => {
+                  try {
+                    if (e.target.showPicker) e.target.showPicker();
+                  } catch (_) {}
+                }}
+                aria-invalid={errors.travelDate && touched.travelDate ? 'true' : 'false'}
+                aria-describedby={errors.travelDate && touched.travelDate ? 'travelDate-error' : undefined}
+                className={`w-full pl-10 pr-3 py-2.5 text-sm bg-white border rounded-xl focus:outline-none focus:ring-2 transition-all cursor-pointer min-h-[42px] text-slate-800 font-medium ${
                   errors.travelDate && touched.travelDate
                     ? 'border-red-500 focus:ring-red-400 bg-red-50/20'
                     : 'border-slate-300 focus:border-amber-500 focus:ring-amber-500/30'
@@ -533,12 +573,20 @@ Kindly share fare quotation, availability, and vehicle details.`;
                 name="passengerCount"
                 min="1"
                 max="50"
+                step="1"
+                inputMode="numeric"
                 value={formData.passengerCount}
                 onChange={handleChange}
+                onKeyDown={(e) => {
+                  if (['e', 'E', '+', '-', '.'].includes(e.key)) {
+                    e.preventDefault();
+                  }
+                }}
                 onBlur={handleBlur}
-                aria-invalid={errors.passengerCount ? 'true' : 'false'}
-                aria-describedby={errors.passengerCount ? 'passengerCount-error' : undefined}
-                className={`w-full pl-10 pr-3 py-2.5 text-sm bg-white border rounded-xl focus:outline-none focus:ring-2 transition-all ${
+                placeholder="e.g. 2"
+                aria-invalid={errors.passengerCount && touched.passengerCount ? 'true' : 'false'}
+                aria-describedby={errors.passengerCount && touched.passengerCount ? 'passengerCount-error' : undefined}
+                className={`w-full pl-10 pr-3 py-2.5 text-sm bg-white border rounded-xl focus:outline-none focus:ring-2 transition-all min-h-[42px] text-slate-800 font-medium ${
                   errors.passengerCount && touched.passengerCount
                     ? 'border-red-500 focus:ring-red-400 bg-red-50/20'
                     : 'border-slate-300 focus:border-amber-500 focus:ring-amber-500/30'
