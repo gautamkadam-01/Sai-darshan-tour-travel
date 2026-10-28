@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Car, 
   MapPin, 
   Phone, 
   MessageCircle, 
@@ -12,6 +11,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { COMPANY_DETAILS } from '../data/company';
+import logoImg from '../assets/sai-darshan-logo.jpeg';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -23,9 +23,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
           {/* Column 1: Brand & Contact Info */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-500 text-white flex items-center justify-center shadow-lg">
-                <Car className="w-6 h-6" />
+            <div className="flex items-center gap-3">
+              <div className="w-13 h-13 rounded-full overflow-hidden flex items-center justify-center bg-white p-0.5 ring-2 ring-amber-400/50 shadow-md flex-shrink-0">
+                <img
+                  src={logoImg}
+                  alt="Sai Darshan Tour & Travel logo"
+                  className="w-12 h-12 object-contain"
+                />
               </div>
               <div>
                 <span className="font-extrabold text-lg text-white tracking-tight block">

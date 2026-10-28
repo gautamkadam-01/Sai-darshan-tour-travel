@@ -8,10 +8,10 @@ import {
   MapPin, 
   Clock, 
   ShieldCheck, 
-  Car,
   ChevronDown
 } from 'lucide-react';
 import { COMPANY_DETAILS } from '../data/company';
+import logoImg from '../assets/sai-darshan-logo.jpeg';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -96,16 +96,20 @@ export default function Navbar() {
       <div className={`max-w-7xl mx-auto px-4 sm:px-6 transition-all duration-200 ${scrolled ? 'py-2.5' : 'py-3.5'}`}>
         <div className="flex items-center justify-between">
           {/* Logo / Brand Name */}
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-500 text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-              <Car className="w-6 h-6" />
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group">
+            <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full overflow-hidden flex items-center justify-center bg-white shadow-sm ring-2 ring-amber-400/40 group-hover:ring-amber-500 transition-all flex-shrink-0">
+              <img
+                src={logoImg}
+                alt="Sai Darshan Tour & Travel logo"
+                className="w-full h-full object-contain p-0.5"
+              />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="font-extrabold text-lg sm:text-xl text-slate-900 tracking-tight leading-tight">
                   Sai Darshan
                 </span>
-                <span className="text-xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-amber-100 text-amber-800">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-200">
                   Shirdi
                 </span>
               </div>
@@ -178,6 +182,25 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-slate-100 bg-white shadow-xl animate-in fade-in duration-200">
           <div className="px-4 pt-3 pb-6 space-y-1">
+            {/* Mobile Header Brand with Logo */}
+            <div className="flex items-center gap-3 px-2 py-2.5 border-b border-slate-100 mb-2">
+              <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center ring-2 ring-amber-400/40 flex-shrink-0">
+                <img
+                  src={logoImg}
+                  alt="Sai Darshan Tour & Travel logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <span className="font-extrabold text-sm text-slate-900 block leading-tight">
+                  Sai Darshan Tour & Travel
+                </span>
+                <span className="text-[11px] text-amber-700 font-medium">
+                  Shirdi, Maharashtra • 24/7 Cab Service
+                </span>
+              </div>
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.name}
