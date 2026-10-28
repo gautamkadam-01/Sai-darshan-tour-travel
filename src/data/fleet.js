@@ -1,0 +1,163 @@
+export const FLEET_DATA = [
+  {
+    id: 'innova-crysta',
+    name: 'Toyota Innova Crysta',
+    category: 'Premium SUV / MUV',
+    tagline: 'Top choice for comfort, family darshan trips & outstation highways',
+    seatingCapacity: '6 to 7 Passengers + 1 Chauffeur',
+    verifiedSeats: '6-7 Seats',
+    luggageCapacity: '3-4 Large Suitcases + Hand Baggage',
+    acType: 'Dual Air Conditioning with Rear Blower Vents',
+    fuelType: 'Diesel / Petrol',
+    pricingDisplay: 'Contact for quotation',
+    image: 'images/fleet/innova-crysta.jpg',
+    imageAlt: 'Toyota Innova Crysta vehicle model reference photo',
+    imageCredit: 'Model reference photograph',
+    highlights: [
+      'Plush captain-seat comfort with supreme legroom',
+      'Dual multi-zone air conditioning',
+      'Soft-suspension ride tuned for long highway comfort',
+      'Spacious boot space for pilgrim luggage and prasad boxes',
+      'USB phone charging points and reading lamps'
+    ],
+    bestSuitedFor: 'Family groups, senior citizens desiring gentle ride quality, Shirdi Airport pickups, and Mumbai/Pune intercity travels.'
+  },
+  {
+    id: 'swift-dzire',
+    name: 'Maruti Suzuki Swift Dzire',
+    category: 'Compact Sedan',
+    tagline: 'Economical, nimble & ideal for small families or couples',
+    seatingCapacity: '4 Passengers + 1 Chauffeur',
+    verifiedSeats: '4 Seats',
+    luggageCapacity: '2 Medium Bags + 2 Handbags',
+    acType: 'Powerful Air Conditioner & Heater',
+    fuelType: 'Petrol / CNG',
+    pricingDisplay: 'Contact for quotation',
+    image: 'images/fleet/swift-dzire.jpg',
+    imageAlt: 'Maruti Suzuki Swift Dzire vehicle model reference photo',
+    imageCredit: 'Model reference photograph',
+    highlights: [
+      'Comfortable seating for up to 4 adult passengers',
+      'Quick city maneuverability in Shirdi temple lanes',
+      'Fuel-efficient and budget-friendly quotation rates',
+      'Clean sanitized cabin with chilled AC',
+      'Music system and mobile charging facility'
+    ],
+    bestSuitedFor: 'Solo devotees, couples, small families (up to 4 members), and railway station pickup/drops.'
+  },
+  {
+    id: 'hyundai-verna',
+    name: 'Hyundai Verna',
+    category: 'Executive Premium Sedan',
+    tagline: 'Elegant styling, whisper-quiet cabin & plush leatherette comfort',
+    seatingCapacity: '4 Passengers + 1 Chauffeur',
+    verifiedSeats: '4 Seats',
+    luggageCapacity: '2 Large Suitcases + 2 Handbags',
+    acType: 'Automatic Climate Control with Rear AC Vents',
+    fuelType: 'Petrol / Diesel',
+    pricingDisplay: 'Contact for quotation',
+    image: 'images/fleet/hyundai-verna.jpg',
+    imageAlt: 'Hyundai Verna premium sedan model reference photo',
+    imageCredit: 'Model reference photograph',
+    highlights: [
+      'Aerodynamic sleek body with aerodynamic quiet cabin',
+      'Advanced shock absorbers for smooth cruising',
+      'Rear AC vents and ergonomic headrests',
+      'Deep 480L boot space for luggage and packages',
+      'Premium interiors suitable for executive and pilgrimage travel'
+    ],
+    bestSuitedFor: 'Corporate guests, couples, small families seeking higher comfort for Mumbai, Pune, and Nashik highway routes.'
+  },
+  {
+    id: 'maruti-ciaz',
+    name: 'Maruti Suzuki Ciaz',
+    category: 'Spacious Mid-Size Sedan',
+    tagline: 'Class-leading rear legroom — ideal for senior citizens and long legs',
+    seatingCapacity: '4 Passengers + 1 Chauffeur',
+    verifiedSeats: '4 Seats',
+    luggageCapacity: '3 Medium-Large Bags',
+    acType: 'Automatic Climate Control with Rear Vents',
+    fuelType: 'Petrol / Smart Hybrid',
+    pricingDisplay: 'Contact for quotation',
+    image: 'images/fleet/maruti-ciaz.jpg',
+    imageAlt: 'Maruti Suzuki Ciaz mid-size sedan model reference photo',
+    imageCredit: 'Model reference photograph',
+    highlights: [
+      'Remarkable rear knee-room and executive lounge comfort',
+      'Wide door opening angle for easy ingress/egress of elders',
+      'Massive 510-litre trunk capacity',
+      'Smooth suspension absorbing highway bumps effortlessly',
+      'Rear sunshade and cup holders for relaxed travel'
+    ],
+    bestSuitedFor: 'Senior citizens requiring effortless entry, family trips to Trimbakeshwar, and long-distance airport transit.'
+  },
+  {
+    id: 'maruti-ertiga',
+    name: 'Maruti Suzuki Ertiga',
+    category: 'Comfort MUV (Multi-Utility Vehicle)',
+    tagline: 'Smart 6-seater value with flexible folding luggage space',
+    seatingCapacity: '6 Passengers + 1 Chauffeur',
+    verifiedSeats: '6 Seats',
+    luggageCapacity: '2 Medium Bags (Expandable with folded 3rd row)',
+    acType: 'Roof-Mounted 2nd Row Air Conditioning',
+    fuelType: 'Petrol / CNG',
+    pricingDisplay: 'Contact for quotation',
+    image: 'images/fleet/maruti-ertiga.jpg',
+    imageAlt: 'Maruti Suzuki Ertiga MUV model reference photo',
+    imageCredit: 'Model reference photograph',
+    highlights: [
+      'Flexible 3-row seating arrangement for medium-size families',
+      'Roof-mounted rear AC blowers keeping all rows cool',
+      'Excellent price-to-space ratio for budget-conscious groups',
+      'Easy step-in height suitable for elderly pilgrims',
+      'Bottle holders and charging sockets across rows'
+    ],
+    bestSuitedFor: 'Families of 5 to 6 persons traveling together for Shani Shingnapur, Nashik day trips, and local Shirdi tours.'
+  },
+  {
+    id: 'tempo-traveller-17',
+    name: 'Tempo Traveller — 17 Seater',
+    category: 'Group Minibus / Mini Coach',
+    tagline: 'Spacious group travel with individual high-back pushback seats',
+    seatingCapacity: '16 to 17 Passengers + 1 Chauffeur',
+    verifiedSeats: '17 Seats',
+    luggageCapacity: 'Dedicated Rear Luggage Boot + Overhead Racks',
+    acType: 'Heavy-Duty Powerful Duct Air Conditioning',
+    fuelType: 'Diesel',
+    pricingDisplay: 'Contact for quotation',
+    image: 'images/fleet/tempo-traveller-17.jpg',
+    imageAlt: '17-Seater Tempo Traveller model reference photo',
+    imageCredit: 'Model reference photograph',
+    highlights: [
+      '2x1 or 2x2 luxury pushback reclining seating configuration',
+      'Wide aisle with ample standing height inside the cabin',
+      'Individual AC airflow louvers and personal reading lights',
+      'Separate rear luggage compartment keeping passenger aisle clear',
+      'Equipped with music system and public address speaker'
+    ],
+    bestSuitedFor: 'Joint families, devotional bhajan mandalis, corporate teams, and groups doing the 5 Jyotirlinga pilgrimage tour.'
+  },
+  {
+    id: 'tempo-traveller-20',
+    name: 'Tempo Traveller — 20 Seater',
+    category: 'Large Group Pilgrimage Coach',
+    tagline: 'Maximized seating capacity for community and extended family tours',
+    seatingCapacity: '19 to 20 Passengers + 1 Chauffeur',
+    verifiedSeats: '20 Seats',
+    luggageCapacity: 'Large Carrier Boot + Heavy-Duty Rooftop Luggage Carrier',
+    acType: 'Industrial Multi-Blower Central Air Conditioning',
+    fuelType: 'Diesel',
+    pricingDisplay: 'Contact for quotation',
+    image: 'images/fleet/tempo-traveller-20.jpg',
+    imageAlt: '20-Seater Tempo Traveller coach model reference photo',
+    imageCredit: 'Model reference photograph',
+    highlights: [
+      'Accommodates large groups in a single comfortable vehicle',
+      'High-back cushioned seats with armrests and head support',
+      'Roof carrier with waterproof tarpaulin for bulk luggage & bags',
+      'Experienced long-distance highway certified chauffeur',
+      'Smooth power steering and air brakes for maximum highway safety'
+    ],
+    bestSuitedFor: 'Large pilgrimage tour groups, wedding party transfers, community temple visits across Maharashtra and India.'
+  }
+];
