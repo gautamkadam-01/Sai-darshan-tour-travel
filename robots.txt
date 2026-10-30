@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gautamkadam-01.github.io/Sai-darshan-tour-travel/sitemap.xml
