@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sai Darshan Tour & Travel | Cab & Taxi Service in Shirdi, Maharashtra</title>
+    
+    <!-- Meta Description & SEO -->
+    <meta name="description" content="Sai Darshan Tour & Travel provides reliable, 24/7 cab booking in Shirdi, Maharashtra. AC Innova Crysta, Swift Dzire, Ertiga, Ciaz & Tempo Travellers for temple darshan, Shirdi Airport, Pune, Mumbai & all-India routes. Contact +91 74985 10536." />
+    <meta name="keywords" content="Shirdi cab service, taxi in Shirdi, Sai Baba Darshan cab, Shirdi airport taxi, Shirdi to Mumbai cab, Shirdi to Pune cab, Innova Crysta Shirdi, Tempo Traveller Shirdi, Sai Darshan Tour Travel" />
+    <meta name="author" content="Sai Darshan Tour & Travel" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://gautamkadam-01.github.io/Sai-darshan-tour-travel/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gautamkadam-01.github.io/Sai-darshan-tour-travel/" />
+    <meta property="og:title" content="Sai Darshan Tour & Travel — Trusted Taxi & Cab Service in Shirdi" />
+    <meta property="og:description" content="Sanitized, AC cabs and tempo travellers for Shirdi Temple darshan, airport pickup, outstation trips to Mumbai, Pune, Nashik, and all over India. Call or WhatsApp +91 74985 10536." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=80" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://gautamkadam-01.github.io/Sai-darshan-tour-travel/" />
+    <meta property="twitter:title" content="Sai Darshan Tour & Travel — Shirdi Cab Service" />
+    <meta property="twitter:description" content="Sanitized, AC cabs and tempo travellers for Shirdi Temple darshan, airport pickup, outstation trips across India." />
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=80" />
+
+    <meta name="theme-color" content="#d97706" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/Sai-darshan-tour-travel/images/sai-darshan-logo.jpeg" />
+    <link rel="apple-touch-icon" href="/Sai-darshan-tour-travel/images/sai-darshan-logo.jpeg" />
+
+    <!-- Schema.org TaxiService / LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TaxiService",
+      "name": "Sai Darshan Tour & Travel",
+      "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=80",
+      "telephone": "+917498510536",
+      "url": "https://gautamkadam-01.github.io/Sai-darshan-tour-travel/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Near Sai Baba Temple, Nagar-Manmad Highway",
+        "addressLocality": "Shirdi",
+        "addressRegion": "Maharashtra",
+        "postalCode": "423109",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.7667,
+        "longitude": 74.4764
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "areaServed": [
+        "Shirdi",
+        "Nashik",
+        "Pune",
+        "Mumbai",
+        "Chhatrapati Sambhajinagar",
+        "Maharashtra",
+        "India"
+      ],
+      "priceRange": "Contact for quotation",
+      "paymentAccepted": "Cash, UPI, Bank Transfer",
+      "description": "Premium 24/7 taxi booking and car rental service in Shirdi for temple darshan, airport pickup, outstation routes and all-India pilgrimages."
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
