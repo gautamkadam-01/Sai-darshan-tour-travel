@@ -1,0 +1,13 @@
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
+import enquiries from "./routes/enquiries.js";
+dotenv.config();
+const app=express();
+app.use(cors({origin:process.env.CLIENT_URL?.split(",")||"*"}));
+app.use(express.json());
+app.get("/api/health",(req,res)=>res.json({ok:true,service:"Sai Darshan Travel API"}));
+app.use("/api/enquiries",enquiries);
+const port=process.env.PORT||5000;
+mongoose.connect(process.env.MONGO_URI).then(()=>app.listen(port,()=>console.log(`API running on ${port}`))).catch(err=>{console.error("MongoDB connection failed:",err.message);app.listen(port,()=>console.log(`API running without MongoDB on ${port}`));});
